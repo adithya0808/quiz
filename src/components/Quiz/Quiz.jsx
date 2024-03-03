@@ -25,7 +25,7 @@ const Quiz = () => {
         setResult(true);
         return 0;
       }
-    setScore(prev=>prev+1);
+
     setIndex(++index);
     setQuestion(data[index]);
     setLock(false);
@@ -41,6 +41,7 @@ const Quiz = () => {
       if(question.ans===ans){
         e.target.classList.add("correct");
         setLock(true);
+        setScore(prev=>prev+1);
       }else{
         e.target.classList.add("wrong");
         setLock(true);
